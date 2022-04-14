@@ -1,0 +1,187 @@
+input {
+  
+    caret-color: var(--primary-color);
+    transition:  all 0.3s;
+    min-height:30px;
+    min-width: -webkit-fill-available;
+    border : 1px solid rgba(41, 108, 146, 0.237);
+    outline :none;
+    background :#f2fbf7;
+    font-size :18px;
+    border-radius: 5px;
+    padding :5px;
+    height: -webkit-fill-available;
+    max-width : 100%;
+   
+}
+.input,.inputText,.inputIcon{
+    width:  -webkit-fill-available;
+   
+}
+input::placeholder {
+  opacity: 0.5;
+}
+
+input:focus {
+    transition:  all 0.3s;
+  box-shadow: 1px 2px 5px rgb(41 108 146 / 11%);
+}
+
+.form{
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+
+.row-input{
+    display: flex;
+    flex-direction: row;
+    gap :25px;
+}
+
+.row-input div{
+    width: 50%;
+}
+.row-input div>input{
+    width: 25px;
+    
+}
+
+
+input[type=button], input[type=submit], input[type=reset],.button_style,.button_style2{
+    transition :0.3s;
+    text-decoration : none;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    padding:25px;
+    padding-top : 8px;
+    padding-bottom : 8px;
+    font-weight: 600;
+    font-size:20px;
+    width : 100%;
+    box-shadow: 0px 2px 15px 0px #0000001A;
+    border: 1px solid 1px solid rgba(41, 108, 146, 0.237);
+}
+
+.button_style,.button_style2{
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 200;
+    padding: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #5870c800;
+}
+.button_style2{
+    background-color: #58ca9a;
+    color: var(--text-colorWhite);
+}
+
+.button_style2:hover{
+    background-color: #f3f3f3;
+    border: 1px solid #5871c8;
+    transition :0.3s;
+    color: var(--primary-color);
+    cursor : pointer
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset] :hover,.button_style:hover{
+    background-color: #58ca9a;
+    border: 1px solid #5871c8;
+    transition :0.3s;
+    color: var(--text-colorWhite);
+    cursor : pointer
+}
+
+.submit{
+    min-width : fit-content
+}
+
+
+
+@media screen and (max-width: 720px) {
+   .section1{
+       display : none;
+
+   }
+   .section2{
+       width : 80%
+   }
+  }
+
+  
+ 
+.field{
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.field:focus{
+    transition:0.2s;
+    display: flex;
+    align-items: center;
+   
+    outline : none;
+    border: 1px solid rgba(69, 165, 157, 0.411);
+    box-shadow: 1px 1px 4px rgba(51, 53, 53, 0.322);
+    color: rgb(66, 66, 66) !important;
+}
+
+
+.field {
+    transition: all 0.4s;
+    display: flex;
+    padding: 6px;
+    margin-bottom: 0px;
+    max-height: 284px;
+    overflow: auto;
+    line-height: 17px;
+    border: 1px solid rgb(88 202 154 / 39%);
+    border-radius: 5px;
+    background: rgb(88 202 154 / 5%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -webkit-user-select: text;
+    align-items: center;
+    word-break: break-all;
+    width: fit-content;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+} 
+
+textarea{
+    max-height: 284px;
+}
+.emojiPicker >nav ,.emojiPicker > .shortcode{
+    display: none;
+}
+
+textarea { resize: none;width:80%;height: 100%; } 
+.emojiPicker .sections{
+    height:100% !important;
+    overflow-x:auto ;
+}
+
+.emojiable-question{
+    border : none;
+    outline:none;
+}
+
+  @media screen and (max-width: 500px) {
+    .section2{
+        width : 100%
+    }
+    .form{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+   }

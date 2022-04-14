@@ -1,0 +1,32 @@
+.inputReset{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0px
+}
+
+.inputIcone{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    caret-color: var(--primary-color);
+    transition:  all 0.3s;
+    min-height:30px;
+    min-width: -webkit-fill-available;
+    border : 1px solid rgba(41, 108, 146, 0.237);
+    outline :none;
+    background :#f2fbf7;
+    font-size :18px;
+    border-radius: 5px;
+    padding :0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: -webkit-fill-available;
+    max-width : 100%;
+}
+
+.inputIcone img{
+    right: 5%;
+    position: absolute;
+}
