@@ -156,8 +156,10 @@ document.getElementById("exitCreatePostModal").addEventListener("click", () => {
 
         document.querySelector(".modalAppear").removeChild(document.querySelectorAll("#lottiePostSuccess")[1])
     }
-    document.querySelector("#lottiePostSuccess").style.cssText = "display : none";
-    document.querySelector(".dragsvg").style.cssText = "display:block"
+    if(document.querySelector("#lottiePostSuccess")){
+        document.querySelector("#lottiePostSuccess").style.cssText = "display : none";
+    }
+     document.querySelector(".dragsvg").style.cssText = "display:block"
     document.querySelector(".psvg").style.cssText = "display:block"
 
     document.getElementById("dragSize").style.cssText = "display:block"

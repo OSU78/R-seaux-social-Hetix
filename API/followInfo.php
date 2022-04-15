@@ -21,18 +21,18 @@ if (isset($_GET["getAllFollowers"]) && isset($_GET["uId"])) {
 
         $abonnement[] = $row;
     }
-
-    print_r($abonnement);
-    die();
+   // print_r(sizeof($abonnement));
+    //die();
+   
     /*Requette pour recuperer les abonnées*/
 
-    $req_abonner = $bdd->prepare('SELECT * FROM follow INNER join user u ON u.id=id_suivi WHERE id_suivi=?');
+    $req_abonner = $bdd->prepare('SELECT * FROM follow INNER join user u ON u.id=id_suiveur WHERE id_suivi=?');
     //var_dump($req_abonner);
-    $req_abonner->execute(array($_SESSION['id']));
+    $req_abonner->execute(array($uId));
     //print_r($email);
     //print_r($mdpsec);
 
-   
+    
 
     while ($row2 = $req_abonner->fetchAll()) {
 
@@ -40,8 +40,24 @@ if (isset($_GET["getAllFollowers"]) && isset($_GET["uId"])) {
     }
     // print_r(sizeof($abonnement));
     // die();
-    $abonnement["nombreAbonnement"] = sizeof($abonnement[0]);
-    $abonner["nombreAbonner"] = sizeof($abonner[0]);
+    if(sizeof($abonnement)==0){
+        $abonnement["nombreAbonnement"] = 0;
+     
+   
+    }
+    else{
+      
+        $abonnement["nombreAbonnement"] = sizeof($abonnement[0]);
+    }
+    
+    if(sizeof($abonner)==0){
+        $abonner["nombreAbonner"] = 0;
+    }
+    else{
+       
+        $abonner["nombreAbonner"] = sizeof($abonner[0]);
+    }
+    
 
 
 

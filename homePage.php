@@ -38,29 +38,21 @@ if ($_SESSION["session_start"]) {
                     max-width: 508px;
 
                 }
+
+                #helloMessage {
+                    font-weight: 100;
+                    font-size: 22px;
+                    color: rgb(0 0 0 / 53%);
+                    
+                }
+                #helloMessage p{
+                    text-decoration: underline;
+                    color: #58ca9a;
+                }
             </style>
-            
-            <div class="storyDiv card flex row paddingLR10 gap20 mgTop18" style="padding-bottom: 0px;">
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
-                <div class="story newstory"></div>
+
+            <div class="storyDiv flex row paddingLR10 gap20 mgTop18" style="padding-bottom: 0px;">
+                <h1 class="flex center row" id="helloMessage">Bon retour parmit nous <p><?=$_SESSION["pseudo"];?></p> </h1>
             </div>
 
             <div id="onepost">

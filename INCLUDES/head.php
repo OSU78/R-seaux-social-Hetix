@@ -17,7 +17,7 @@
         <title>Hetix</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
         <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style_minify.css">
         <link rel="stylesheet" href="./css/formulaire.css">
         <link rel="stylesheet" href="./css/icone.css">
 

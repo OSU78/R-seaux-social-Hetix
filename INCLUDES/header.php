@@ -60,7 +60,7 @@
             <div href="#" class="header_link header_profilPic flex center columns cursorNone" style="margin-right: 45px;">
                 <div style="display:flex;width:-webkit-fill-available;align-items: center;gap: 5px;">
                     <img class="fullradius" src="ASSETS/profilPicture/<?= $_SESSION['avatar'] ?>" alt="<?= $_SESSION['pseudo'] ?>" width="30px">
-                    <span class="colorBlackGray uppercase"><?= $_SESSION['pseudo'] ?></span>
+                    <span class="colorBlackGray uppercase pseudoHeader"><?= $_SESSION['pseudo'] ?></span>
                 </div>
                 <span class="circle_span"></span>
                 <!-- Sous Menu pour l'icone Profil image -->

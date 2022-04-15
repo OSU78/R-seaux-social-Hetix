@@ -9,6 +9,10 @@ window.setTimeout(() => {
                 var locationArraySize = location.length - 1
                 if (location[locationArraySize] == "profil.php") {
                     e.target.innerText = "ecrire";
+                    if(document.querySelector(".countAbonner")){
+                       let actualFollower= parseInt(document.querySelector(".countAbonner").innerText)+1
+                       document.querySelector(".countAbonner").innerText=actualFollower
+                    }
                     var anim = document.querySelector(".animFollowAppear")
                     anim.style.cssText = "Background-color: white; width: -webkit-fill-available;height: 15px;transition : 0.4s;min-width:60px"
                     anim.innerHTML = '  <lottie-player id="lottie2" src="ASSETS/icones/addFollow.json" background="transparent" speed="0.8" style="width: 28px; height: 28px;" autoplay></lottie-player>';

@@ -12,12 +12,14 @@ function popup(element, pop) {
         var popProfil = document.querySelector(".popupProfil")
         pop.style.cssText = "display:block;z-index : 8;opacity : 1";
         popProfil.style.cssText += "right : -100px;top : -10px";
-        document.querySelector(".fixed").style.cssText = "z-index:-1"
+        document.querySelector(".fixed").style.cssText = "z-index:-1";
+        document.querySelector(".pseudoHeader").style.display = "none";
     })
     element.addEventListener("mouseleave", () => {
         console.log("toto")
         pop.style.cssText = "display:none;z-index : -1";
         document.querySelector(".fixed").style.cssText = "z-index:8"
+        document.querySelector(".pseudoHeader").style.display = "block";
     })
 }
 

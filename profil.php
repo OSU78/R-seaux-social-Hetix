@@ -84,184 +84,6 @@ if ($_SESSION["session_start"]) {
                 background-size: cover;
             }
 
-            .userPseudo {
-                font-size: 20px;
-                font-weight: 300;
-            }
-
-            .regular {
-                color: #33353591;
-            }
-
-            .bolded {
-                font-weight: 350;
-                color: black;
-            }
-
-            .mgRight10 {
-                margin-right: 10px;
-            }
-
-            .alignItemCenter {
-                align-items: center;
-            }
-
-            .mgTop40 {
-                margin-top: 40px;
-            }
-
-            .alignItemStart {
-                align-items: start;
-            }
-
-            .userBio {
-                max-width: 420px;
-            }
-
-            .hrCustom {
-                border: none;
-                border-bottom: 1px solid #58ca9a66;
-                margin: 0px
-            }
-
-            .itemPublication {
-                align-items: center;
-                margin-top: 0px;
-                border-top: 3px solid #49ca9f;
-                align-items: center;
-                width: fit-content;
-                padding-top: 5px;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-bottom: 5px;
-                transition: all 0.2s
-            }
-
-            .itemPublication:hover {
-                transition: all 0.3s;
-                background: rgb(88 202 154 / 17%);
-                cursor: pointer;
-            }
-
-            .postMiniCard {
-                height: 220px;
-                width: 220px;
-                background-size: cover;
-                transition: 0.2s;
-                border-radius: 8px;
-                position: relative;
-                overflow: hidden;
-                background-repeat: no-repeat;
-
-            }
-
-            .postMiniCard:hover {
-                transform: scale(1.10);
-                transition: 0.3s;
-                cursor: pointer;
-                border-radius: 15px;
-                box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
-            }
-
-            .wrap {
-                flex-wrap: wrap;
-            }
-
-            .max500 {
-                max-width: 910px;
-            }
-
-            .nbrLike,
-            .nbrComment {
-
-                color: transparent;
-            }
-
-            .hoverPostMiniCard {
-                height: -webkit-fill-available;
-                background-color: rgba(0, 0, 0, 0.0);
-                width: -webkit-fill-available;
-                margin: 0;
-                position: absolute;
-                top: 200px;
-                transition: 0.3s;
-            }
-
-            .postMiniCard:hover .hoverPostMiniCard {
-                top: 0px;
-                background: rgb(0, 34, 33);
-                background: -moz-linear-gradient(0deg, rgba(0, 34, 33, 0.9) 25%, rgba(28, 163, 171, 0.07125623686974791) 100%);
-                background: -webkit-linear-gradient(0deg, rgba(0, 34, 33, 0.9) 25%, rgba(28, 163, 171, 0.07125623686974791) 100%);
-                background: linear-gradient(0deg, rgba(0, 34, 33, 0.9) 25%, rgba(28, 163, 171, 0.07125623686974791) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002221", endColorstr="#1ca3ab", GradientType=1);
-                transition: 0.3s;
-            }
-
-            .postMiniCard:hover .nbrLike {
-                color: rgba(255, 255, 255, 0.8)
-            }
-
-            .postMiniCard:hover .nbrComment {
-                color: rgba(255, 255, 255, 0.8)
-            }
-
-            .animFollow {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: white;
-                border: 1px solid rgba(0, 0, 0, 0.15);
-                height: 15px;
-                transition: 0.4s;
-                min-width: 60px;
-            }
-
-            .animFollow a {
-                display: none;
-                transition: all 0.3s;
-            }
-
-            .animFollow span {
-                display: none;
-            }
-
-            .animFollowAppear {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: min-content;
-                transition: 0.4s
-            }
-
-            .animFollowAppear a {
-                text-decoration: none;
-                color: white;
-                transition: all 0.3s;
-            }
-
-            .animFollowAppear a:hover {
-                text-decoration: none;
-                color: var(--primary-color)
-            }
-
-            .lookAbonnement,
-            .lookAbonner {
-                transition: all 0.3s;
-                border: solid 1px transparent;
-                border-radius: 8px;
-                padding: 5px;
-                padding-right: 10px;
-                padding-left: 10px;
-
-            }
-
-            .lookAbonnement:hover,
-            .lookAbonner:hover {
-                transition: 0.3s;
-                transform: scale(1.15);
-                border: solid 1px rgba(0, 0, 0, 0.15);
-                cursor: pointer
-            }
         </style>
         <main class="flex center row mgTop40 " style="align-items: flex-start;">
             <?php
@@ -323,8 +145,8 @@ if ($_SESSION["session_start"]) {
                         </div>
                         <div class="flex center row gap20 cursorNone">
                             <p class="regular"><span class="bolded">15</span> publications</p>
-                            <p class="regular lookAbonner"><span class="bolded countAbonner">0 </span> abonnés</p>
-                            <p class="regular lookAbonnement" onclick="lookAbonnement()"><span class="bolded countAbonnement">0</span> abonnements</p>
+                            <p class="regular lookAbonner" onclick="lookAbonnement('abonner')" > <span class="bolded countAbonner">0 </span> abonnés</p>
+                            <p class="regular lookAbonnement" onclick="lookAbonnement('abonnement')"><span class="bolded countAbonnement">0</span> abonnements</p>
                         </div>
                         <div>
                             <p class="userBio">
@@ -401,6 +223,32 @@ if ($_SESSION["session_start"]) {
 
 
 
+               <!--Nombre abonner!-->
+               <section class=" flex center nbAbonnement cursorNone">
+                <section class=" flex center ">
+                    <section class="card fixed cursorNone " style="z-index: 8;padding-left: 0; padding-right: 0">
+                        <div class=" flex row center spaceArround">
+                            <div class="flex row spaceBetween center paddingLR10">
+                                <p>Liste d'abonnement</p>
+                                <svg id="exitCreatePostModal" onclick="exitModalAbonnement()" width="25" height="25" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.8 0H31.2C33.2687 0 35.2526 0.821783 36.7154 2.28457C38.1782 3.74735 39 5.73131 39 7.8V31.2C39 33.2687 38.1782 35.2526 36.7154 36.7154C35.2526 38.1782 33.2687 39 31.2 39H7.8C5.73131 39 3.74735 38.1782 2.28457 36.7154C0.821783 35.2526 0 33.2687 0 31.2V7.8C0 5.73131 0.821783 3.74735 2.28457 2.28457C3.74735 0.821783 5.73131 0 7.8 0V0ZM7.8 3.9C6.76566 3.9 5.77368 4.31089 5.04228 5.04228C4.31089 5.77368 3.9 6.76566 3.9 7.8V31.2C3.9 32.2343 4.31089 33.2263 5.04228 33.9577C5.77368 34.6891 6.76566 35.1 7.8 35.1H31.2C32.2343 35.1 33.2263 34.6891 33.9577 33.9577C34.6891 33.2263 35.1 32.2343 35.1 31.2V7.8C35.1 6.76566 34.6891 5.77368 33.9577 5.04228C33.2263 4.31089 32.2343 3.9 31.2 3.9H7.8ZM22.2573 19.5L27.7739 25.0146C28.1397 25.3805 28.3453 25.8768 28.3453 26.3942C28.3453 26.9117 28.1397 27.408 27.7739 27.7739C27.408 28.1397 26.9117 28.3453 26.3942 28.3453C25.8768 28.3453 25.3805 28.1397 25.0146 27.7739L19.5 22.2573L13.9854 27.7739C13.6195 28.1397 13.1232 28.3453 12.6058 28.3453C12.0883 28.3453 11.592 28.1397 11.2262 27.7739C10.8603 27.408 10.6547 26.9117 10.6547 26.3942C10.6547 25.8768 10.8603 25.3805 11.2262 25.0146L16.7427 19.5L11.2262 13.9854C10.8603 13.6195 10.6547 13.1232 10.6547 12.6058C10.6547 12.0883 10.8603 11.592 11.2262 11.2262C11.592 10.8603 12.0883 10.6547 12.6058 10.6547C13.1232 10.6547 13.6195 10.8603 13.9854 11.2262L19.5 16.7427L25.0146 11.2262C25.3805 10.8603 25.8768 10.6547 26.3942 10.6547C26.9117 10.6547 27.408 10.8603 27.7739 11.2262C28.1397 11.592 28.3453 12.0883 28.3453 12.6058C28.3453 13.1232 28.1397 13.6195 27.7739 13.9854L22.2573 19.5Z" fill="#58CA9A" />
+                                </svg>
+                            </div>
+                        </div>
+                        <hr class="customHr">
+                        <div id="data" class="flex center">
+                            <lottie-player id="lottie" src="ASSETS/icones/loadingHetix.json" background="transparent" speed="1" style="width: 50px; height: 50px;position: absolute;top: 25%;" loop autoplay></lottie-player>
+                        </div>
+                        <div id="abonnement">
+
+                        </div>
+
+                    </section>
+                </section>
+            </section>
+
+
+
         </main>
 
         </body>
@@ -408,14 +256,12 @@ if ($_SESSION["session_start"]) {
         <script src="JS/allFollowing.js" defer></script>
         <script src="JS/follow.js" defer></script>
         <script src="JS/headerInteract.js" defer></script>
-        <script src="JS/ajax.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
         
         <script src="JS/notificationPush.js" defer></script>
         <script src="JS/frontInteraction.js" defer></script>
         <script src="JS/createNewPost.js" defer></script>
-        <script src="JS/allPost.js" defer></script>
-
+       
         </html>
 
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

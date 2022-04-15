@@ -143,6 +143,9 @@ header_profilPic {
     color: var(--primary-color)
 }
 
+
+
+
 .widthContent {
     width: -webkit-fill-available !important;
 }
@@ -248,9 +251,14 @@ li {
     /* Non-prefixed version, currently*/
 }
 
-.customHr {
+.customHr2 {
     border: none;
     border-bottom: 1px solid rgb(88 202 154 / 39%);
+}
+.customHr2{
+    border: none;
+    border-right: 1px solid rgb(88 202 154 / 39%);
+
 }
 
 /* ------------*/
@@ -687,6 +695,7 @@ p {
     align-items: center;
     width: auto;
     height: auto;
+    min-height: 135px;
     padding-left: 0px;
     padding-right: 0px;
     transition: all 0.3s;
@@ -842,7 +851,297 @@ p {
 }
 
 
+/*PAGE SENDmESSAGE css*/ 
+.messageBox {
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 45px;
+    background: rgba(88, 202, 154, 0.15);
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: fit-content;
+    min-width: 60px;
+    min-height: 35px;
+}
 
+.positionL {
+    float: left;
+}
+
+.positionR {
+
+    float: right;
+}
+
+#allMessage {
+    min-width: 500px;
+    max-height: 300px;
+    max-width: 540px;
+    overflow: auto;
+    overflow-x: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    scroll-behavior: smooth;
+}
+
+.styleNone {
+    background: none;
+    background-color: none;
+    border: none
+}
+
+.oneMsg li {
+    max-width: 150px;
+    width: max-content;
+    display: flex
+}
+
+.textarea {
+    font-size: 18px;
+    max-height: 86px;
+}
+
+.textarea:focus {
+    border-radius: 5px;
+    outline: none;
+    overflow: auto
+}
+
+.sendStyle {
+    transition: 0.25s
+}
+
+.sendStyle:hover {
+    transform: scale(1.13);
+    transition: 0.25s;
+    cursor: pointer;
+
+}
+
+.inputText2 {
+    position: relative;
+}
+.customCard{
+   border: 4px dashed #5871c826;
+}
+
+
+
+
+
+
+
+
+
+/*PAGE PROFIL CSS*/ 
+
+
+
+
+.circleProfilImg {
+    background-image: url("ASSETS/profilPicture/<?= $arrayAllPost[0][0]['imageProfil'] ?>");
+    border-radius: 200px;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+}
+
+.userPseudo {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.regular {
+    color: #33353591;
+}
+
+.bolded {
+    font-weight: 350;
+    color: black;
+}
+
+.mgRight10 {
+    margin-right: 10px;
+}
+
+.alignItemCenter {
+    align-items: center;
+}
+
+.mgTop40 {
+    margin-top: 40px;
+}
+
+.alignItemStart {
+    align-items: start;
+}
+
+.userBio {
+    max-width: 420px;
+}
+
+.hrCustom {
+    border: none;
+    border-bottom: 1px solid #58ca9a66;
+    margin: 0px
+}
+
+.itemPublication {
+    align-items: center;
+    margin-top: 0px;
+    border-top: 3px solid #49ca9f;
+    align-items: center;
+    width: fit-content;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    transition: all 0.2s
+}
+
+.itemPublication:hover {
+    transition: all 0.3s;
+    background: rgb(88 202 154 / 17%);
+    cursor: pointer;
+}
+
+.postMiniCard {
+    height: 220px;
+    width: 220px;
+    background-size: cover;
+    transition: 0.2s;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+
+}
+
+.postMiniCard:hover {
+    transform: scale(1.10);
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.max500 {
+    max-width: 910px;
+}
+
+.nbrLike,
+.nbrComment {
+
+    color: transparent;
+}
+
+.hoverPostMiniCard {
+    height: -webkit-fill-available;
+    background-color: rgba(0, 0, 0, 0.0);
+    width: -webkit-fill-available;
+    margin: 0;
+    position: absolute;
+    top: 200px;
+    transition: 0.3s;
+}
+
+.postMiniCard:hover .hoverPostMiniCard {
+    top: 0px;
+    background: rgb(0, 34, 33);
+    background: -moz-linear-gradient(0deg, rgba(0, 34, 33, 0.9) 25%, rgba(28, 163, 171, 0.07125623686974791) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 34, 33, 0.9) 25%, rgba(28, 163, 171, 0.07125623686974791) 100%);
+    background: linear-gradient(0deg, rgba(0, 34, 33, 0.9) 25%, rgba(28, 163, 171, 0.07125623686974791) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#002221", endColorstr="#1ca3ab", GradientType=1);
+    transition: 0.3s;
+}
+
+.postMiniCard:hover .nbrLike {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.postMiniCard:hover .nbrComment {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.animFollow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    height: 15px;
+    transition: 0.4s;
+    min-width: 60px;
+}
+
+.animFollow a {
+    display: none;
+    transition: all 0.3s;
+}
+
+.animFollow span {
+    display: none;
+}
+
+.animFollowAppear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min-content;
+    transition: 0.4s
+}
+
+.animFollowAppear a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.animFollowAppear a:hover {
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
+.lookAbonnement,
+.lookAbonner {
+    transition: all 0.3s;
+    border: solid 1px transparent;
+    border-radius: 8px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+
+.lookAbonnement:hover,
+.lookAbonner:hover {
+    transition: 0.3s;
+    transform: scale(1.15);
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    cursor: pointer
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------*/
+
+/* ------------------*/
 @media screen and (max-width: 780px) {
     .postMiniCard{
         transition : 0.3s;

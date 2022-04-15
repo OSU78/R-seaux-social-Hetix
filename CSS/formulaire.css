@@ -1,4 +1,4 @@
-input {
+input,.inputText2 {
   
     caret-color: var(--primary-color);
     transition:  all 0.3s;
@@ -78,8 +78,8 @@ input[type=button], input[type=submit], input[type=reset],.button_style,.button_
     border: 1px solid #5870c800;
 }
 .button_style2{
-    background-color: #58ca9a;
-    color: var(--text-colorWhite);
+    background-color: #ffffff;
+    color: var(--primary-color);
 }
 
 .button_style2:hover{
